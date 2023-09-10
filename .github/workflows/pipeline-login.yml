@@ -3,7 +3,7 @@ name: pipeline-login para Projeto React
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
