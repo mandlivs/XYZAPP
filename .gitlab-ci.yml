@@ -1,0 +1,21 @@
+stages:
+  - build
+  - test
+  - security
+
+variables:
+
+build:
+  stage: build
+  script:
+
+test:
+  stage: test
+  script:
+
+security_scan:
+  stage: security
+  script:
+    - apt-get update -qy
+    - apt-get install -y zaproxy
+    - zap-baseline.py -t <URL_DO_SEU_APLICATIVO> 
